@@ -5,7 +5,7 @@ def join_strings(a, b)
 	if (a.is_a? (String)) && (b.is_a? (String))
 		puts(a + " " + b)
 	else
-		puts("ruh roh, try again")
+		puts("ruh roh, try again. hint: i like strings.")
 	end
 end
 
