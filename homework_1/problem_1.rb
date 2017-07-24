@@ -10,7 +10,7 @@ def full_name(first_name, last_name, title)
 	   # Set the variable name to the value of the variable title, plus a space, plus the value of the variable first_name, plus a space, plus the value of the variable last name.
     name = title + ' ' + first_name + ' ' + last_name
   
-  # Else, if ((which means if the first line did not evaluate to true)) if title AND last_name are set to a value, run the code below.
+  # Else, if ((which means if the first line did not evaluate to true)), if title AND last_name are set to a value, run the code below.
   elsif title && last_name
 	   # Set the variable name to the value of the variable title, plus a space, plus the value of the variable last_name.
     name = title + ' ' + last_name
