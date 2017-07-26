@@ -24,7 +24,9 @@ class Homework
 	end
 
 	def repeat_string(repeat_this, this_number)
-
+		1.upto(this_number) do |i|
+			puts(repeat_this)
+		end
 	end
 
 	# def calendar([],[])
@@ -34,4 +36,7 @@ class Homework
 end
 
 test = Homework.new
-test.shout("good morning")
+test.shout("good morning alexa")
+test.repeat_string("wake up", 3)
+test.shout("i said good morning!!!")
+
