@@ -10,7 +10,8 @@ def sum(entry)
 	puts(entry + 1)
 end
 
-sum(a) # This line of code will result in an error because a has not been defined in a place where sum can access it. Ruby thinks a has no value (not even nil) becuase local variables don't have the value of nil before they are created like instance variables do.
+# sum(a) 
+# This line of code will result in an error because a has not been defined in a place where sum can access it. Ruby thinks a has no value (not even nil) becuase local variables don't have the value of nil before they are created like instance variables do.
 
 def sum(entry)
 	puts(entry + 1)
@@ -43,4 +44,11 @@ puts(alexa.name) # I can call the name method on the alexa object and return "Al
 # -------------------------------- #
 
 # Use the Ruby documentation to choose a method from the Integer class and describe what it does in your own words.
+
+# The .next method on the integer class returns the integer fed into the method +1. It returns the "next" integer line as if we were counting. -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 . . .
+
+puts(0.next) #=> 1
+puts(3.next) #=> 4
+puts(-7.next) #=> -6
+puts(30000.next) #=> 30001
 
