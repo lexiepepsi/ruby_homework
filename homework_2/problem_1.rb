@@ -13,7 +13,7 @@ def fizzbuzz(number)
   # Create a case statement. (Case statements test equality using 'when' clauses. The first 'when' clause to evaluate to true gets its code executed.)
   case
   	# When the argument number divides by 15 with a remainder equal to 0, return the string "Fizzbuzz". 
-    # ((Note, 15 comes before 5. Since the when statements are evaluated top-down a number such as 30, which is a multiple of all 3 numbers, will return Fizzbuzz because the first when statement will evaluate to true and get its code executed before we even get to 3 or 5 in the lines below it.))
+    # ((Note, 15 is tested before 5. Since the when statements are evaluated top-down a number such as 30, which is a multiple of all 3 numbers, will return Fizzbuzz because the first when statement will evaluate to true and get its code executed before we even get to 3 or 5 in the lines below it.))
     when number % 15 == 0 then 'Fizzbuzz'
     # When the argument number divides by 3 with a remainder equal to 0, return the string "Fizz".
     when number % 3  == 0 then 'Fizz'

@@ -29,28 +29,21 @@ class Homework
 		end
 	end
 
-	
-
 	def calendar(a, b)
-		a.each do
-			my_hash = Hash.new
-			my_hash[a] = b
-		end
+		combined = a.zip(b)
+		puts(combined.to_h)
 	end
 
 end
 
 test = Homework.new
+
 test.shout("good morning alexa")
 test.repeat_string("wake up", 3)
 test.shout("i said good morning alexa!!!")
 
 holidays = ["Christmas", "New Years Day", "My Birthday"]
 dates = ["December 25th", "January 1st", "November 5th"]
-# my_hash = Hash.new
-# my_hash[holidays] = dates
-# puts(my_hash)
-
 test.calendar(holidays, dates)
 
 
