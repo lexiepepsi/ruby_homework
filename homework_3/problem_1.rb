@@ -9,6 +9,7 @@
 # Print the result of calling this method with the string it was the best of times, it was the worst of times.
 
 class Utility
+	
 	def count_words(string)
 
 		hash = Hash.new(0)
