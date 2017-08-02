@@ -15,25 +15,24 @@
 class Animal
 
 	def sound(animal)
-		puts("a noise")
+		"an animal noise"
 	end
 
 	def speak(animal)
-		puts("The #{animal} says: ")
-		sound(animal)
+		puts("The #{animal} says: #{sound(animal)}")
 	end
 
 end
 
 class Sheep < Animal
 	def sound(animal)
-		puts("baahhhh")
+		"baahhhh"
 	end
 end
 
 class Cow < Animal
 	def sound(animal)
-		puts("mooooooo")
+		"mooooooo"
 	end
 end
 
