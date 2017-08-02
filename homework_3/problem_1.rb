@@ -17,7 +17,10 @@ class Utility
 		cleaned = string.delete(",")
 		array = cleaned.split(" ")
 
-		array.each { |key| hash[key] += 1 }
+		array.each do |key| 
+			hash[key] += 1
+		end
+		
 		puts(hash)
 
 	end
