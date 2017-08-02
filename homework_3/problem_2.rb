@@ -15,12 +15,12 @@
 class Animal
 
 	def sound(animal)
-		puts("noise")
+		puts("a noise")
 	end
 
 	def speak(animal)
-		"I say things like"
-		puts(sound(animal))
+		puts("The #{animal} says: ")
+		sound(animal)
 	end
 
 end
@@ -36,3 +36,10 @@ class Cow < Animal
 		puts("mooooooo")
 	end
 end
+
+
+sheep = Sheep.new
+sheep.speak("sheep")
+
+cow = Cow.new
+cow.speak("cow")
