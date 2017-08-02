@@ -9,29 +9,21 @@
 # Print the result of calling this method with the string it was the best of times, it was the worst of times.
 
 class Utility
-	# def count_words(string)
-	# 	cleaned = string.delete(",")
-	# 	array = cleaned.split(" ")
-	# 	uniques = array.uniq
+	def count_words(string)
 
-	# 	array.each do |x|
-	# 		uniques.count(x)
-		
-	# 	end
-	# end
+		hash = Hash.new(0)
 
+		cleaned = string.delete(",")
+		array = cleaned.split(" ")
 
-	def count_em(string, substring)
-  		puts(string.scan(/(?=#{substring})/).count)
+		array.each{|key| hash[key] += 1}
+		puts(hash)
+
 	end
 
-	# ary.count { |x| x%2 == 0 } #=> 3
 end
 
 sentence = "it was the best of times, it was the worst of times"
-# uniques = ["it", "was", "the", "best", "of", "times", "worst"]
 
 test = Utility.new
-# test.count_words(sentence)
-
-test.count_em(sentence, "it")
+test.count_words(sentence)
