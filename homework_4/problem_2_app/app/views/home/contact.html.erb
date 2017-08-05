@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Hi there!</h1>
+	<h3>Welcome. Thanks for trying to contact us. Please submit your information below.</h3>
+
+	<%= form_tag('/thanks') do %>
+		<p>
+		<%= label_tag(:name) %>
+		<%= text_field_tag(:name) %>
+		</p>
+
+		<p>
+		<%= label_tag(:email) %>
+		<%= text_field_tag(:email) %>
+		</p>
+
+		<p>
+		<%= label_tag(:message) %>
+		<%= text_field_tag(:message) %>
+		</p>
+
+		<%= submit_tag %>
+	<% end %>
+
+</body>
+</html>
