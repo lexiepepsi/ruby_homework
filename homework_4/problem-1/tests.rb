@@ -3,6 +3,7 @@ require_relative './triangle'
 
 class TriangleTest < MiniTest::Unit::TestCase
   def test_equilateral_triangles_have_equal_sides
+    # you're creating a new instance of tri class, running .kind on it to see what the output of .kind is (shoudl be :equ, :iso, or :scal) and then testing the expectation for the test triangle against the reality of the .kind code you wrote
     assert_equal :equilateral, Triangle.new(2, 2, 2).kind
   end
 
