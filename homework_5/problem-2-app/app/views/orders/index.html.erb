@@ -1,0 +1,13 @@
+<h1>ORDERS</h1>
+
+<h3>All Orders:</h1>
+
+
+	<% @orders.each do |order| %>
+		<p>Order_id: <%= order.id %></p>
+		<ul>
+			<li>User_id: <%= order.user_id %></li>
+			<li>Item_id: <%= order.item_id %></li>
+			<li>Created_at: <%= order.created_at %></li>
+		</ul>
+	<% end %>
