@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources(:orders)
+	root('orders#index')
+	resources(:orders)
 end
