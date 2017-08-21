@@ -11,17 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814024002) do
+ActiveRecord::Schema.define(version: 20170821060049) do
 
   create_table "items", force: :cascade do |t|
-    t.integer  "item_number"
-    t.integer  "price"
-    t.integer  "inventory_id"
+    t.integer  "sku"
     t.string   "name"
-    t.string   "category"
-    t.string   "size"
-    t.string   "color"
-    t.boolean  "for_sale"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.text     "product_details"
@@ -32,26 +26,17 @@ ActiveRecord::Schema.define(version: 20170814024002) do
     t.integer "order_id", null: false
   end
 
-  add_index "items_orders", ["item_id", "order_id"], name: "index_items_orders_on_item_id_and_order_id"
-  add_index "items_orders", ["order_id", "item_id"], name: "index_items_orders_on_order_id_and_item_id", unique: true
-
   create_table "orders", force: :cascade do |t|
-    t.string   "order_status"
-    t.integer  "item_id"
-    t.integer  "line_item_qty"
-    t.integer  "tracking_number"
+    t.integer  "item_qty"
     t.integer  "user_id"
-    t.datetime "shipped_at"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "item_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "email"
-    t.string   "address"
-    t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
