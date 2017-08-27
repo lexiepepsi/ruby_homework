@@ -6,8 +6,21 @@
 	<% @orders.each do |order| %>
 		<p>Order_id: <%= order.id %></p>
 		<ul>
-			<li>User_id: <%= order.user_id %></li>
-			<li>Item_id: <%= order.item_id %></li>
+			<li>User: <%= order.user.name %></li>
+			<li>Item: <%= order.items.collect(&:name) %></li>
+			<li>Item2: <%= order.item_id %></li>
 			<li>Created_at: <%= order.created_at %></li>
 		</ul>
 	<% end %>
+
+	<p>Collect the user_id of the orders that have a certain item_id</p>
+	<%= Item.find_by(id: 1).orders.collect(&:user_id) %>
+	<%= Item.find_by(id: 2).orders.collect(&:user_id) %>
+	<%= Item.find_by(id: 3).orders.collect(&:user_id) %>
+
+	<p>Collect the order_ids of the first user</p>
+	<%= User.find_by(id: 1).orders.collect(&:id) %>
+
+	<p>Collect names of the items in Order with id of 5</p>
+	<%= Order.find_by(id: 5).items.collect(&:name) %>
+

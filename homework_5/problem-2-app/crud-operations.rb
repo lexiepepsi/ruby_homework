@@ -63,3 +63,21 @@ Order.find(5).items
 
 Item.find(1).orders.collect(&:id)
 
+# <--------------testing first project v7---------------->
+
+Product.all.collect(&:title)
+Order.create(user: "Alexa")
+order.products
+order.products.push(Product.first)
+Product.find(1).orders
+order.products.push(Product.last)
+order.products
+Product.find_by(title: "bunny")
+Product.find_by(title: "bunny").orders.collect(&:user)
+Order.all
+order2 = Order.create(user: "Ari")
+order2.products.push(Product.first)
+Product.find_by(title: "bunny").orders.collect(&:user)
+
+# <--------------attempt two---------------->
+
