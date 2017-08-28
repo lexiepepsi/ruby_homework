@@ -8,9 +8,9 @@
 	</head>
 	<body>
 
-		<ul>
-				<li><%= link_to('All Orders', orders_path) %></li>
-				<li><%= link_to('Create a New Order', new_order_path) %></li>
+		<ul class="nav-bar">
+				<li class="nav"><%= link_to('All orders', orders_path) %></li>
+				<li class="nav"><%= link_to('New order', new_order_path) %></li>
 		</ul>
 
 		<%= yield %>

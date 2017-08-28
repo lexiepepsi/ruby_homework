@@ -1,26 +1,15 @@
-<h1>ORDERS</h1>
-
-<h3>All Orders:</h1>
+<h2>All Orders</h2>
 
 
 	<% @orders.each do |order| %>
-		<p>Order_id: <%= order.id %></p>
+		<p>Order #<%= order.id %></p>
 		<ul>
 			<li>User: <%= order.user.name %></li>
-			<li>Item: <%= order.items.collect(&:name) %></li>
-			<li>Item2: <%= order.item_id %></li>
-			<li>Created_at: <%= order.created_at %></li>
+			<!-- <li>Item: <%= order.items.collect(&:name) %></li> -->
+			<li>Item: <%= order.items.pluck(:name) %></li>
+			<!-- <li>Item Qty: <%= order.item_qty %></li> -->
+			<li>Created At: <%= order.created_at %></li>
 		</ul>
 	<% end %>
 
-	<p>Collect the user_id of the orders that have a certain item_id</p>
-	<%= Item.find_by(id: 1).orders.collect(&:user_id) %>
-	<%= Item.find_by(id: 2).orders.collect(&:user_id) %>
-	<%= Item.find_by(id: 3).orders.collect(&:user_id) %>
-
-	<p>Collect the order_ids of the first user</p>
-	<%= User.find_by(id: 1).orders.collect(&:id) %>
-
-	<p>Collect names of the items in Order with id of 5</p>
-	<%= Order.find_by(id: 5).items.collect(&:name) %>
-
+	
