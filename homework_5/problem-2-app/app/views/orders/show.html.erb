@@ -7,3 +7,7 @@
 <p>Name: <%= @order.user.name %></p>
 <p>Item: <%= @order.items.pluck(:name) %></p>
 <p>Created_at: <%= @order.created_at %></p>
+<p>Updated_at: <%= @order.updated_at %></p>
+
+<div class="button"><%= link_to('Edit', edit_order_path(@order))%></div>
+<div class="button"><%= link_to('Delete', @order, method: :delete)%></div>

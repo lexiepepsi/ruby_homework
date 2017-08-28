@@ -12,5 +12,13 @@
 			<li>Item: <%= order.items.pluck(:name) %></li>
 			<li>Item Qty: <%= order.items.count %></li>
 			<li>Created At: <%= order.created_at %></li>
+			<li>Updated At: <%= order.updated_at %></li>
 		</ul>
+
+		<div class="button"><%= link_to('View', order, metho: :show)%></div>
+		<div class="button"><%= link_to('Edit', edit_order_path(order))%></div>
+		<div class="button"><%= link_to('Delete', order, method: :delete)%></div>
+
 	<% end %>
+
+

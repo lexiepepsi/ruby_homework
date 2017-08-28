@@ -23,7 +23,7 @@ body {
 }
 
 .nav {
-	background-color: mediumorchid;
+	background-color: purple;
 	padding: 3px;
 	margin: 10px;
 	border-radius: 5px;
@@ -36,4 +36,20 @@ body {
 .nav a {
 	text-decoration: none;
 	color: seashell;
+}
+
+.button a {
+	text-decoration: none;
+	color: seashell;
+}
+
+.button {
+	display: inline-block;
+	font-size: 15px;
+	background-color: mediumorchid;
+	width: 60px;
+	text-align: center;
+	padding: 4px;
+	margin: 2px;
+	border-radius: 5px;
 }
