@@ -79,5 +79,23 @@ order2 = Order.create(user: "Ari")
 order2.products.push(Product.first)
 Product.find_by(title: "bunny").orders.collect(&:user)
 
-# <--------------attempt two---------------->
+# <--------------relationships btw User, Order, and Items---------------->
+Order.all.ids
+Order.find(32).user_id
+Order.find(32).items
+Order.find(32).items.pluck(:name)
+Order.find(11).items.pluck(:name)
+
+Item.all.ids
+Item.find(1).orders
+Item.find(1).orders.ids
+
+Order.all.map(&:user_id)
+Item.find(3).product_details
+Item.find(3).orders.pluck(:user_id)
+Item.find(3).orders.pluck(:id)
+Order.find(35).items.pluck(:product_details)
+
+User.find(1).orders.ids
+User.find(2).orders.pluck(:updated_at)
 
