@@ -1,0 +1,9 @@
+<h2>Your Order</h2>
+
+<p>Your order details</p>
+
+<p>You ordered:</p>
+<p>Order #: <%= @order.id %></p>
+<p>Name: <%= @order.user.name %></p>
+<p>Item: <%= @order.items.pluck(:name) %></p>
+<p>Created_at: <%= @order.created_at %></p>

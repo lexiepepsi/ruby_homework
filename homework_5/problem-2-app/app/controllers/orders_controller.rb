@@ -11,13 +11,11 @@ class OrdersController < ApplicationController
 	def create
 		@order = Order.create(params[:order].permit({item_ids: []}, :user_id))
 		
-
 		if @order.valid?
 			render(:create)
 		else
 			render(:new)
 		end
-
 	end
 
 	def show
@@ -30,7 +28,7 @@ class OrdersController < ApplicationController
 
 	def update
 		@order = Order.find(params[:id])
-		@order.update(params[:order].permit(:item_id, :user_id))
+		@order.update(params[:order].permit({item_ids: []}, :user_id))
 	end
 
 	def destroy
