@@ -10,6 +10,14 @@ class OrdersController < ApplicationController
 
 	def create
 		@order = Order.create(params[:order].permit({item_ids: []}, :user_id))
+		
+
+		if @order.valid?
+			render(:create)
+		else
+			render(:new)
+		end
+
 	end
 
 	def show
@@ -29,4 +37,10 @@ class OrdersController < ApplicationController
 		@order = Order.find(params[:id])
 		@order.destroy
 	end
+
+	# private
+	# def order_params
+	# 	params[:order].permit({item_ids: []}, :user_id)
+	# end
+
 end

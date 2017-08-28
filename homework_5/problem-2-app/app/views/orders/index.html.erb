@@ -8,7 +8,7 @@
 
 			<!-- <li>Item: <%= order.items.collect(&:name) %></li> -->
 			<!-- <li>Item: <%= order.items.select(:name).map(&:name) %></li> -->
-			
+
 			<li>Item: <%= order.items.pluck(:name) %></li>
 			<li>Item Qty: <%= order.items.count %></li>
 			<li>Created At: <%= order.created_at %></li>
