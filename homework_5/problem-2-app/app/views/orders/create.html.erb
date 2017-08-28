@@ -5,5 +5,5 @@
 <p>You ordered:</p>
 <p>Order #: <%= @order.id %></p>
 <p>Name: <%= @order.user.name %></p>
-
+<p>Item: <%= @order.items.pluck(:name) %></p>
 <p>Created_at: <%= @order.created_at %></p>

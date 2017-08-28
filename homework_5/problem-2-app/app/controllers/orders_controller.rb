@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+
 	def index
 		@orders = Order.all
 	end
@@ -8,7 +9,7 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		@order = Order.create(params[:order].permit(:item_id, :user_id))
+		@order = Order.create(params[:order].permit({item_ids: []}, :user_id))
 	end
 
 	def show
