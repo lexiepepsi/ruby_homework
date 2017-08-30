@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action(:authenticate_user!, except: [:index, :show])
+
 	def index
 		@users = User.all
 	end
@@ -21,7 +23,7 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		@user.update(params:[:user].permit(:name, :email))
+		@user.update(params[:user].permit(:name, :email))
 	end
 
 	def destroy
