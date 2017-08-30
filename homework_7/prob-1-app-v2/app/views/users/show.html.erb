@@ -1,9 +1,13 @@
-<h2><%= @user.name %></h2>
-<p><%= @user.email %></p>
-<p>ID: <%= @user.id %></p>
-<p>Created at: <%= @user.created_at %></p>
+<div class="show">
+	<h2><%= @user.name %></h2>
+	<p><%= @user.email %></p>
+	<p>ID: <%= @user.id %></p>
+	<p>Created at: <%= @user.created_at %></p>
+</div>
 
-<ul>
-	<li><%= link_to('Edit', edit_user_path(@user)) %></li>
-	<li><%= link_to('Delete', @user, method: :delete) %></li>
-</ul>
+
+	<ul>
+		<li><%= link_to('Edit', edit_user_path(@user)) %></li>
+		<li><%= link_to('Delete', @user, method: :delete) %></li>
+	</ul>
+
