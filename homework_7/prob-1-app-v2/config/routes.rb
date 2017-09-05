@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root('users#index')
   devise_for(:users)
   resources(:users)
-  
 end
 
 #      Prefix Verb   URI Pattern                    Controller#Action
@@ -27,8 +26,10 @@ end
 #                          PATCH  /users/password(.:format)      devise/passwords#update
 #                          PUT    /users/password(.:format)      devise/passwords#update
 # cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
-#        user_registration POST   /users(.:format)               devise/registrations#create
+
 #    new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
+#        user_registration POST   /users(.:format)               devise/registrations#create
+
 #   edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
 #                          PATCH  /users(.:format)               devise/registrations#update
 #                          PUT    /users(.:format)               devise/registrations#update

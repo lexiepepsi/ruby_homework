@@ -1,8 +1,11 @@
 <div class="show">
-	<h2><%= @user.name %></h2>
-	<p><%= @user.email %></p>
-	<p>ID: <%= @user.id %></p>
-	<p>Created at: <%= @user.created_at %></p>
+	<div>ID: <%= @user.id %></div>
+	<h2><%= @user.name %>, aka: <%= @user.profile %></h2>
+	<h3>"<%= @user.headline %>"</h3>
+
+	<br>
+	<div><%= @user.email %></div>
+	<div>Created at: <%= @user.created_at %></div>
 </div>
 
 
