@@ -81,3 +81,30 @@ a {
 .show p, h2 {
 	padding: 10px;
 }
+
+/*DEVISE STUFFF*/
+.instruct {
+	font-size: 30px;
+	text-decoration: underline;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.field {
+	padding: 5px;
+}
+
+.links {
+	margin-top: 15px;
+	font-size: 15px;
+	text-align: left;
+}
+
+.notice, .alert {
+	color: white;
+	background-color: blue;
+	margin: 20px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
