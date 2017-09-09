@@ -1,0 +1,17 @@
+<h2>Edit!</h2>
+
+<%= form_for(@user) do |f| %>
+	<div>
+		<%= f.label(:name) %>
+		<%= f.text_field(:name, placeholder: 'Enter name here') %>
+	</div>
+
+	<div>
+		<%= f.label(:profile) %>
+		<%= f.text_field(:profile, placeholder: 'Enter profile here') %>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

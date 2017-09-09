@@ -1,0 +1,8 @@
+
+
+<% @users.each do |user| %>
+	<ul class="user">
+		<li><%= link_to(user.id, user_path(user)) %></li>
+		<li><%= user.name %>, <%= user.profile %></li>
+	</ul>
+<% end %>

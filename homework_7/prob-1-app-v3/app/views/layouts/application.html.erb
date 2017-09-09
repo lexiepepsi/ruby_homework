@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Prob1AppV3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+	<head>
+	  <title>Homework 7!</title>
 
-</body>
+		<!-- CSS Reset -->
+		<link href="reset.css" type="text/css" rel="stylesheet">
+
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	  <%= csrf_meta_tags %>
+	</head>
+
+	<body>
+
+		<div class="login">
+
+		</div>
+
+		<ul class="nav">
+			<li><%= link_to('All Users', root_path) %></li>
+			<!-- <li><%= link_to('New User', new_user_path) %></li> -->
+		</ul>
+
+		<%= yield %>
+
+	</body>
+
 </html>
