@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-    validates_presence_of(:name, :headline, :profile)
-   	# validates_presence_of(:name, :headline, :profile)
+    # validates_presence_of(:name, :headline, :profile)
+   	validates :name, presence: { message: "must be given please" }
+   	validates :headline, presence: { message: "must be given please" }
+   	validates :profile, presence: { message: "must be given please" }
 
 end
