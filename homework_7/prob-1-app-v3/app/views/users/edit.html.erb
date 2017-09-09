@@ -1,5 +1,13 @@
 <h2 class="instruct">Edit User</h2>
 
+<% if @user.errors.any? %>
+	<ul class="error-messages">
+		<% @user.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+<% end %>
+
 <%= form_for(@user) do |f| %>
 	<div>
 		<%= f.label(:name) %>

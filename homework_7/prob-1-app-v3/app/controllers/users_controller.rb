@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 		@user.update(params[:user].permit(:name, :profile, :headline))
 
 		if @user.valid?
-			redirect_to_user('Your account was sucessfully updated!')
+			redirect_to_user('Sucessfully updated!')
 		else
 			render(:edit)
 		end
