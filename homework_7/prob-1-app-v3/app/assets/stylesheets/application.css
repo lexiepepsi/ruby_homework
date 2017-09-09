@@ -87,6 +87,10 @@ a {
 	font-weight: bold;
 }
 
+.nameprofile a {
+	color: red;
+}
+
 .show {
 	margin-top: 30px;
 	margin-bottom: 30px;

@@ -4,6 +4,21 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label(:name) %>
+    <%= f.text_field(:name, placeholder: 'Enter name here') %>
+  </div>
+
+  <div class="field">
+    <%= f.label(:profile) %>
+    <%= f.text_field(:profile, placeholder: 'Enter profile here') %>
+  </div>
+
+  <div class="field">
+    <%= f.label(:headline) %>
+    <%= f.text_field(:headline, placeholder: 'Enter headline here') %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -24,6 +39,7 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
 <% end %>
 
 <div class="links"><%= render "devise/shared/links" %></div>
