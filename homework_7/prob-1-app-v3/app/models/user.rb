@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
     validates_presence_of(:name, :headline, :profile)
 
+	def admin_or_belongs_to?(person)
+		person.try(:admin?) || self.id == person.id
+	end
+
 end
