@@ -1,4 +1,4 @@
-<h2>Sign Up!</h2>
+<h2 class="instruct">Sign Up!</h2>
 
 <%= form_for(@user) do |f| %>
 	<div>
@@ -9,6 +9,11 @@
 	<div>
 		<%= f.label(:profile) %>
 		<%= f.text_field(:profile, placeholder: 'Enter profile here') %>
+	</div>
+
+	<div>
+		<%= f.label(:headline) %>
+		<%= f.text_field(:headline, placeholder: 'Enter headline here') %>
 	</div>
 	
 	<div>

@@ -69,6 +69,24 @@ a {
 	padding: 2px;
 }
 
+.makeitbold {
+	font-weight: bold;
+}
+
+.makeititalic {
+	font-style: italic;
+}
+
+.makeitsmaller {
+	font-size: 15px;
+}
+
+.nameprofile {
+	color: red;
+	font-size: 23px;
+	font-weight: bold;
+}
+
 .show {
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -82,7 +100,6 @@ a {
 	padding: 10px;
 }
 
-/*DEVISE STUFFF*/
 .instruct {
 	font-size: 30px;
 	text-decoration: underline;
@@ -90,6 +107,7 @@ a {
 	text-align: center;
 }
 
+/*DEVISE STUFFF*/
 .field {
 	padding: 5px;
 }

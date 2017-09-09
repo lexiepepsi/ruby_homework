@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.create(params[:user].permit(:name, :profile))
+		@user = User.create(params[:user].permit(:name, :profile, :headline))
 	end
 
 	def show
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		@user.update(params[:user].permit(:name, :profile))
+		@user.update(params[:user].permit(:name, :profile, :headline))
 	end
 
 	def destroy

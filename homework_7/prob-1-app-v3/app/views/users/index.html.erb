@@ -1,8 +1,8 @@
-
-
 <% @users.each do |user| %>
 	<ul class="user">
-		<li><%= link_to(user.id, user_path(user)) %></li>
-		<li><%= user.name %>, <%= user.profile %></li>
+		<li class="makeitbold"><%= link_to(user.id, user_path(user)) %></li>
+		<li class="nameprofile"><%= user.name %>, <%= user.profile %></li>
+		<li class="makeititalic">"<%= user.headline %>"</li>
+		<li class="makeitsmaller"><%= user.email %></li>
 	</ul>
 <% end %>
