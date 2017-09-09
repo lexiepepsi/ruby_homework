@@ -24,6 +24,13 @@
 		<%= f.text_field(:headline, placeholder: 'Enter headline here') %>
 	</div>
 
+	<% if @user.admin_check(current_user) %>
+		<div>
+			<%= f.label(:admin) %>
+			<%= f.check_box(:admin) %>
+		</div>
+	<% end %>
+
 	<div>
 		<%= f.submit %>
 	</div>

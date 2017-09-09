@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 		person.try(:admin?) || self.id == person.id
 	end
 
+	def admin_check(person)
+		person.try(:admin?)
+	end
+
 end

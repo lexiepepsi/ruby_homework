@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		@user.update(params[:user].permit(:name, :profile, :headline))
+		@user.update(params[:user].permit(:name, :profile, :headline, :admin))
 
 		if @user.valid?
 			redirect_to_user('Sucessfully updated!')
