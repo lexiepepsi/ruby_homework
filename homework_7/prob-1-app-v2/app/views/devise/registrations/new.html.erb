@@ -3,21 +3,6 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div>
-    <%= f.label(:name) %>
-    <%= f.text_field(:name, placeholder: 'Enter name here') %>
-  </div>
-
-  <div>
-    <%= f.label(:profile) %>
-    <%= f.text_field(:profile, placeholder: 'Enter profile here') %>
-  </div>
-
-  <div>
-    <%= f.label(:headline) %>
-    <%= f.text_field(:headline, placeholder: 'Enter headline here') %>
-  </div>
-
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>

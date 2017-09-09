@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root('users#index')
-  devise_for :users, :controllers => { registrations: 'registrations' }
-  # devise_for(:users)
+  # devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for(:users)
   resources(:users)
 end
 
