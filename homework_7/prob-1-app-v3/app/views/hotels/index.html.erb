@@ -4,8 +4,8 @@
 		</ul>
 <% end %>
 
-<% if params[:query] %>
-	<p class="instruct goldenrod">Searching Hotels for: <%= params[:query] %></p>
+<% if params[:location] %>
+	<p class="instruct goldenrod">Searching Hotels for: <%= params[:location] %></p>
 <% end %>
 
 <% @hotels.each do |hotel| %>

@@ -35,7 +35,7 @@
 		
 			<li class="makeitsmaller allhotels">Search by hotel location:
 				<%= form_for(hotels_path, method: :get) do %>
-					<%= text_field_tag(:query, params[:query]) %>
+					<%= text_field_tag(:location, params[:location]) %>
 					<%= submit_tag("Search") %>
 				<% end %>
 			</li>

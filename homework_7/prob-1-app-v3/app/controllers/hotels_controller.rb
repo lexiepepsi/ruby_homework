@@ -5,7 +5,11 @@ class HotelsController < ApplicationController
 
 
 	def index
-		@hotels = Hotel.search(params[:query])
+		if params[:location].present?
+			@hotels = Hotel.near(params[:location], 100)
+		else
+			@hotels = Hotel.all
+		end
 	end
 
 	def new
