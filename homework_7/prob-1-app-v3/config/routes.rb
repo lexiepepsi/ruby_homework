@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root('users#index')
   resources(:users)
+  resources(:hotels)
 end
 
 #  					Prefix Verb   URI Pattern                    Controller#Action
@@ -32,3 +33,12 @@ end
 #                          PATCH  /users/:id(.:format)           users#update
 #                          PUT    /users/:id(.:format)           users#update
 #                          DELETE /users/:id(.:format)           users#destroy
+
+              #     hotels GET    /hotels(.:format)              hotels#index
+              #            POST   /hotels(.:format)              hotels#create
+              #  new_hotel GET    /hotels/new(.:format)          hotels#new
+              # edit_hotel GET    /hotels/:id/edit(.:format)     hotels#edit
+              #      hotel GET    /hotels/:id(.:format)          hotels#show
+              #            PATCH  /hotels/:id(.:format)          hotels#update
+              #            PUT    /hotels/:id(.:format)          hotels#update
+              #            DELETE /hotels/:id(.:format)          hotels#destroy
