@@ -39,6 +39,9 @@ body {
 	padding: 3px;
 	background-color: tomato;
 	border-radius: 5px;
+	border-color: red;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .nav {
@@ -86,9 +89,9 @@ a {
 	padding: 10px;
 	border-radius: 10px;
 	background-color: gold;
-	/*border-color: sienna;
+	border-color: sienna;
 	border-style: solid;
-	border-width: 1px;*/
+	border-width: 1px;
 }
 
 .user {
