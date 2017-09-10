@@ -1,0 +1,15 @@
+<%= form_for(@hotel) do |f| %>
+	<div>
+		<%= f.label(:name) %>
+		<%= f.text_field(:name, placeholder: 'Enter name here') %>
+	</div>
+
+	<div>
+		<%= f.label(:description) %>
+		<%= f.text_field(:description, placeholder: 'Enter description here') %>
+	</div>
+	
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
