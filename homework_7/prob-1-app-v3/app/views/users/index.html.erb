@@ -1,7 +1,7 @@
 <% @users.each do |user| %>
 	<ul class="user">
 		<li class="makeitbold"><%= link_to(user.id, user_path(user)) %></li>
-		<li class="nameprofile"><%= link_to(user.name, user_path(user)) %>, <%= user.profile %></li>
+		<li class="nameprofile"><%= link_to(user.name, user_path(user)) %>, <%= link_to(user.profile, user_path(user)) %></li>
 		<li class="makeititalic">"<%= user.headline %>"</li>
 		<li class="makeitsmaller"><%= user.email %></li>
 	</ul>
