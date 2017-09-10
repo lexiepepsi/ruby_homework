@@ -1,8 +1,12 @@
+<ul class="newhotel">
+	<li><%= link_to('Create New Hotel', new_hotel_path) %></li>
+</ul>
+
 <% @hotels.each do |hotel| %>
-	<ul class="user">
+	<ul class="user hotel">
 		<li class="makeitbold"><%= link_to(hotel.id, hotel_path(hotel)) %></li>
-		<li class="nameprofile"><%= hotel.name %></li>
-		<li class="makeititalic">"<%= hotel.description %>"</li>
+		<li class="hotelprofile"><%= link_to(hotel.name, hotel_path(hotel))%></li>
+		<li class="makeititalic goldenrod">"<%= hotel.description %>"</li>
 		<li class="makeitsmaller">Owner: <%= link_to(hotel.user.name, user_path(hotel.user)) %></li>
 	</ul>
 <% end %>

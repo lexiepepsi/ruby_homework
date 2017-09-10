@@ -1,4 +1,5 @@
 class HotelsController < ApplicationController
+	before_action(:authenticate_user!, except: [:index, :show])
 
 	def index
 		@hotels = Hotel.all
@@ -9,7 +10,7 @@ class HotelsController < ApplicationController
 	end
 
 	def create
-		@hotel = Hotel.create(params[:hotel].permit(:name, :description))
+		@hotel = Hotel.create(params[:hotel].permit(:name, :description, :user_id))
 	end
 
 	def show
@@ -22,7 +23,7 @@ class HotelsController < ApplicationController
 
 	def update
 		@hotel = Hotel.find(params[:id])
-		@hotel.update(params[:hotel].permit(:name, :description))
+		@hotel.update(params[:hotel].permit(:name, :description, :user_id))
 	end
 
 	def destroy

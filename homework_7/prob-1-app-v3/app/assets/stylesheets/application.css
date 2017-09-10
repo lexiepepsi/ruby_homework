@@ -49,19 +49,46 @@ body {
 
 .nav a {
 	text-decoration: none;
-	color: white;
+	color: red;
 }
 
 .nav li {
 	display: inline-block;
-	background-color: red;
+	background-color: white;
 	padding: 5px;
 	border-radius: 5px;
+	border-color: tomato;
+	border-style: solid;
+	border-width: 1px;
 }
+
+.allhotels a {
+	color: gold;
+}
+
 
 a {
 	text-decoration: none;
 	color: blue;
+}
+
+.newhotel {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.newhotel a {
+	color: sienna;
+}
+
+.newhotel li {
+	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: gold;
+	/*border-color: sienna;
+	border-style: solid;
+	border-width: 1px;*/
 }
 
 .user {
@@ -90,6 +117,26 @@ a {
 .nameprofile a {
 	color: red;
 }
+
+.hotelprofile {
+	color: gold;
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.hotelprofile a {
+	color: gold;
+}
+
+.hotel {
+	color: gold;
+}
+
+.goldenrod {
+	color: goldenrod;
+}
+
+
 
 .show {
 	margin-top: 30px;
