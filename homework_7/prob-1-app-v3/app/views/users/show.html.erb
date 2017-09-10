@@ -16,3 +16,12 @@
 		</ul>
 	<% end %>
 <% end %>
+
+<div class="hotel instruct">Hotels Owned by <%= @user.name %>: </div>
+	<% @user.hotels.each do |hotel| %>
+		<ul class="user hotel">
+			<li class="makeitbold"><%= link_to(hotel.id, hotel_path(hotel)) %></li>
+			<li class="hotelprofile"><%= link_to(hotel.name, hotel_path(hotel))%></li>
+			<li class="makeititalic goldenrod">"<%= hotel.description %>"</li>
+		</ul>
+	<% end %>
