@@ -21,6 +21,11 @@
 		</div>
 
 		<div>
+			<%= f.label(:address) %>
+			<%= f.text_field(:address, placeholder: 'Enter address here') %>
+		</div>
+
+		<div>
 			<% if @hotel.admin_check(current_user) %>
 				<%= f.label(:user_id) %>
 				<%= f.collection_select(:user_id, User.all, :id, :name) %>

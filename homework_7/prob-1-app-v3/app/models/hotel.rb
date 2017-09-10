@@ -1,7 +1,7 @@
 class Hotel < ActiveRecord::Base
 	belongs_to(:user)
 
-	validates_presence_of(:name, :description, :user_id)
+	validates_presence_of(:name, :description, :user_id, :address)
 	validates_uniqueness_of(:name)
 
 

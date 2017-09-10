@@ -1,13 +1,14 @@
 <div class="show hotel">
-	<div>ID: <%= @hotel.id %></div>
-	<h2><%= @hotel.name %></h2>
-	<h3>"<%= @hotel.description %>"</h3>
+	<div class="goldenrod">ID: <%= @hotel.id %></div>
+	<h2 class="makeitbold"><%= @hotel.name %></h2>
+	<h3 class="goldenrod">"<%= @hotel.description %>"</h3>
 
 	<% if @hotel.image.present? %>
 		<div class="showimage"><%= link_to(image_tag(@hotel.image.url(:full)), @hotel.image.url) %></div>
 	<% end %>
 
 	<br>
+	<h3 class="goldenrod">Location: <%= @hotel.address %></h3>
 	<div>Owned by: <%= link_to(@hotel.user.name, user_path(@hotel.user)) %></div>
 
 	<div>Created at: <%= @hotel.created_at %></div>
@@ -18,7 +19,8 @@
 	<%if @hotel.admin_or_belongs_to?(current_user, @hotel.id) %>
 		<ul>
 			<li><%= link_to('Edit', edit_hotel_path(@hotel)) %></li>
-			<li><%= link_to('Delete', @hotel, method: :delete) %></li>
+			<br>
+			<li class="makeitsmaller"><%= link_to('Delete', @hotel, method: :delete) %></li>
 		</ul>
 	<% end %>
 <% end %>

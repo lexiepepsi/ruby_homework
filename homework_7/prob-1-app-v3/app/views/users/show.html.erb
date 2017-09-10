@@ -12,7 +12,8 @@
 	<% if @user.admin_or_belongs_to?(current_user) %>
 		<ul>
 			<li><%= link_to('Edit', edit_user_path(@user)) %></li>
-			<li><%= link_to('Delete', @user, method: :delete) %></li>
+			<br>
+			<li class="makeitsmaller"><%= link_to('Delete', @user, method: :delete) %></li>
 		</ul>
 	<% end %>
 <% end %>
