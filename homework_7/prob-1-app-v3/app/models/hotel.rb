@@ -20,5 +20,10 @@ class Hotel < ActiveRecord::Base
 
   	geocoded_by(:address)
 	after_validation(:geocode)
-	
+
+	def self.search(query)
+		query = "%#{query}%"
+		where("name LIKE ? OR description LIKE ?", query, query)
+	end
+
 end

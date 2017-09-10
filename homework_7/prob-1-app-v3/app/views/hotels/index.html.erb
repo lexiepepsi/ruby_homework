@@ -4,6 +4,10 @@
 		</ul>
 <% end %>
 
+<% if params[:query] %>
+	<p class="instruct goldenrod">Searching Hotels for: <%= params[:query] %></p>
+<% end %>
+
 <% @hotels.each do |hotel| %>
 	<ul class="user hotel">
 		<li class="makeitbold"><%= link_to(hotel.id, hotel_path(hotel)) %></li>

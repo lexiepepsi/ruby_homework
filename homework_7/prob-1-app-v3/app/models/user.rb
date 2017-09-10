@@ -15,5 +15,5 @@ class User < ActiveRecord::Base
 	def admin_check(person)
 		person.try(:admin?)
 	end
-
+	
 end
