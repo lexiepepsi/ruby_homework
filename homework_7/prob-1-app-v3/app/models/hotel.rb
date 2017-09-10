@@ -7,4 +7,8 @@ class Hotel < ActiveRecord::Base
 		person.try(:admin?) || person.hotels.ids.include?(place)
 	end
 
+	def admin_check(person)
+		person.try(:admin?)
+	end
+
 end
