@@ -31,15 +31,7 @@
 
 		<ul class="nav">
 			<li><%= link_to('All Users', root_path) %></li>
-			<li class="allhotels"><%= link_to('All Hotels', hotels_path) %></li>
-		
-			<li class="makeitsmaller allhotels">Search by hotel location:
-				<%= form_for(hotels_path, method: :get) do %>
-					<%= text_field_tag(:location, params[:location]) %>
-					<%= submit_tag("Search") %>
-				<% end %>
-			</li>
-			
+			<li class="allhotels"><%= link_to('All Hotels', hotels_path) %></li>	
 		</ul>
 
 

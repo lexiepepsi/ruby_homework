@@ -1,3 +1,12 @@
+<ul class="nav">
+	<li class="makeitsmaller allhotels">Search by hotel location:
+		<%= form_for(hotels_path, method: :get) do %>
+			<%= text_field_tag(:location, params[:location]) %>
+			<%= submit_tag("Search") %>
+		<% end %>
+	</li>
+</ul>
+
 <% if current_user != nil %>
 		<ul class="newhotel">
 			<li><%= link_to('Create New Hotel', new_hotel_path) %></li>
