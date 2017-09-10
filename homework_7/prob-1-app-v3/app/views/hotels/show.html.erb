@@ -9,7 +9,12 @@
 	<div>Created at: <%= @hotel.created_at %></div>
 </div>
 
-	<ul>
-		<li><%= link_to('Edit', edit_hotel_path(@hotel)) %></li>
-		<li><%= link_to('Delete', @hotel, method: :delete) %></li>
-	</ul>
+
+<% if current_user != nil %>
+	<%if @hotel.admin_or_belongs_to?(current_user, @hotel.id) %>
+		<ul>
+			<li><%= link_to('Edit', edit_hotel_path(@hotel)) %></li>
+			<li><%= link_to('Delete', @hotel, method: :delete) %></li>
+		</ul>
+	<% end %>
+<% end %>

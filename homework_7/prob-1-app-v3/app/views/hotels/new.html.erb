@@ -1,3 +1,13 @@
+<div class="instruct hotel">New Hotel</div>
+
+<% if @hotel.errors.any? %>
+	<ul class="error-messages">
+		<% @hotel.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+<% end %>
+
 <div class="hotel">
 	<%= form_for(@hotel) do |f| %>
 		<div>
