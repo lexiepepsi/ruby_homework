@@ -13,7 +13,7 @@ class HotelsController < ApplicationController
 	end
 
 	def create
-		@hotel = Hotel.create(params[:hotel].permit(:name, :description, :user_id))
+		@hotel = Hotel.create(params[:hotel].permit(:name, :description, :user_id, :image))
 
 		if @hotel.valid?
 			redirect_to_hotel('Sucessfully created!')
@@ -29,7 +29,7 @@ class HotelsController < ApplicationController
 	end
 
 	def update
-		@hotel.update(params[:hotel].permit(:name, :description, :user_id))
+		@hotel.update(params[:hotel].permit(:name, :description, :user_id, :image))
 
 		if @hotel.valid?
 			redirect_to_hotel('Sucessfully updated!')

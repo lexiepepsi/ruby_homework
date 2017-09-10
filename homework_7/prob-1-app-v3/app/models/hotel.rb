@@ -13,4 +13,9 @@ class Hotel < ActiveRecord::Base
 		person.try(:admin?)
 	end
 
+	has_attached_file(:image,
+  						styles: {thumbnail: '100x100>',
+  								  full: '300X300>'})
+  	validates_attachment_content_type(:image, content_type: /\Aimage\/.*\z/)
+
 end

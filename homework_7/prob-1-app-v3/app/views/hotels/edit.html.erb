@@ -28,6 +28,11 @@
 				<div>Owned by: <%= @hotel.user.name %></div>
 			<% end %>
 		</div>
+
+		<div>
+			<%= f.label(:image) %>
+			<%= f.file_field(:image) %>
+		</div>
 		
 		<div>
 			<%= f.submit %>

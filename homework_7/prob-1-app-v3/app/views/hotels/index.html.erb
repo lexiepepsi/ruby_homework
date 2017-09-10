@@ -11,4 +11,10 @@
 		<li class="makeititalic goldenrod">"<%= hotel.description %>"</li>
 		<li class="makeitsmaller">Owner: <%= link_to(hotel.user.name, user_path(hotel.user)) %></li>
 	</ul>
+
+	<% if hotel.image.present? %>
+		<div class="indeximage"><%= link_to(image_tag(hotel.image.url(:thumbnail)), hotel.image.url) %></div>
+	<% end %>
+
 <% end %>
+
